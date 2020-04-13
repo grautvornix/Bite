@@ -3,6 +3,8 @@
     x:Class="Baer.BiteGui.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Baer.BiteGui"
+    xmlns:dz="http://schemas.devzest.com/presentation/docking"
     WindowTitle="Baer Bahnsicherung Integrierte Testumgebung">
     
     <Page.CommandBindings>
@@ -24,6 +26,24 @@
                 <MenuItem Header="_Save Layout" Click="SaveLayout_Click" />
                 <MenuItem Header="_Load Layout " Click="LoadLayout_Click" IsEnabled="{Binding ElementName=mainPage, Path=IsLayoutSaved}" />
             </MenuItem>
-        </Menu>            
+        </Menu>
+        <dz:DockControl
+            x:Name="dockControl"
+            Grid.Row="1"
+            dz:AutoHide.Animation="Slide"
+            FocusedItemChanged="OnFocusedItemChanged"
+            ActiveItemChanged="OnActiveItemChanged"
+            ActiveDocumentChanged="OnActiveDocumentChanged"
+            DockItemStateChanging="OnDockItemStateChanging"
+            DockItemStateChanged="OnDockItemStateChanged"
+            DockTreeZOrder="Right, Left, Top, Bottom">
+            <dz:DockControl.DockItems>
+                <local:Output x:Name="output" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Bottom}" />
+                <local:SavedLayout x:Name="savedLayout" ShowAction="{dz:ShowAsDockPositionAction DockPosition=BottomAutoHide}" />
+                <local:PropertiesWindow x:Name="propertiesWindow" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Left}" />
+                <local:SolutionExplorer x:Name="solutionExplorer" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Right}" />
+                <local:Welcome x:Name="welcome" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Document}" />
+            </dz:DockControl.DockItems>
+        </dz:DockControl>
     </Grid>
 </Page>

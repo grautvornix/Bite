@@ -31,7 +31,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\github\\bite\\Bite\\WpfDocking\\WpfDocking.csproj": {
+                "projectPath": "C:\\github\\bite\\Bite\\WpfDocking\\WpfDocking.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -62,6 +66,17 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\github\\bite\\Bite\\WpfDocking\\WpfDocking.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\github\\bite\\Bite\\WpfDocking\\WpfDocking.csproj",
+        "projectName": "WpfDocking",
+        "projectPath": "C:\\github\\bite\\Bite\\WpfDocking\\WpfDocking.csproj"
+      },
+      "frameworks": {
+        "net35-client": {}
       }
     }
   }

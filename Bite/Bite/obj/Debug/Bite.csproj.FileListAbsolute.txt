@@ -1,0 +1,15 @@
+C:\github\bite\Bite\Bite\bin\Debug\Bite.exe.config
+C:\github\bite\Bite\Bite\bin\Debug\Bite.exe
+C:\github\bite\Bite\Bite\bin\Debug\Bite.pdb
+C:\github\bite\Bite\Bite\obj\Debug\Bite.csprojAssemblyReference.cache
+C:\github\bite\Bite\Bite\obj\Debug\MainWindow.g.cs
+C:\github\bite\Bite\Bite\obj\Debug\App.g.cs
+C:\github\bite\Bite\Bite\obj\Debug\Bite_MarkupCompile.cache
+C:\github\bite\Bite\Bite\obj\Debug\Bite_MarkupCompile.lref
+C:\github\bite\Bite\Bite\obj\Debug\MainWindow.baml
+C:\github\bite\Bite\Bite\obj\Debug\Bite.g.resources
+C:\github\bite\Bite\Bite\obj\Debug\Bite.Properties.Resources.resources
+C:\github\bite\Bite\Bite\obj\Debug\Bite.csproj.GenerateResource.cache
+C:\github\bite\Bite\Bite\obj\Debug\Bite.csproj.CoreCompileInputs.cache
+C:\github\bite\Bite\Bite\obj\Debug\Bite.exe
+C:\github\bite\Bite\Bite\obj\Debug\Bite.pdb

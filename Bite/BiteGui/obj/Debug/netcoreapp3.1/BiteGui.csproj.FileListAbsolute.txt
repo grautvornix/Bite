@@ -1,0 +1,14 @@
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\BiteGui.csprojAssemblyReference.cache
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\MainPage.baml
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\MainPage.g.cs
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\BiteGui_MarkupCompile.cache
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\Output.baml
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\Output.g.cs
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\BiteGui.g.resources
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\BiteGui.csproj.CoreCompileInputs.cache
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\BiteGui.AssemblyInfoInputs.cache
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\BiteGui.AssemblyInfo.cs
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\BiteGui_MarkupCompile.lref
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\SavedLayout.baml
+C:\github\bite\Bite\BiteGui\obj\Debug\netcoreapp3.1\SavedLayout.g.cs

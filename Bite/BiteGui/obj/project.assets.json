@@ -1,11 +1,29 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "WpfDocking/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/WpfDocking.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WpfDocking.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "WpfDocking/1.0.0": {
+      "type": "project",
+      "path": "../WpfDocking/WpfDocking.csproj",
+      "msbuildProject": "../WpfDocking/WpfDocking.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "WpfDocking >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\marcm\\.nuget\\packages\\": {},
@@ -39,7 +57,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\github\\bite\\Bite\\WpfDocking\\WpfDocking.csproj": {
+              "projectPath": "C:\\github\\bite\\Bite\\WpfDocking\\WpfDocking.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
