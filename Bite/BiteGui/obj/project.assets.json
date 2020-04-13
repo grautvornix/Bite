@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\github\\Bite\\BiteGui\\BiteGui.csproj",
+      "projectUniqueName": "C:\\github\\bite\\Bite\\BiteGui\\BiteGui.csproj",
       "projectName": "BiteGui",
-      "projectPath": "C:\\github\\Bite\\BiteGui\\BiteGui.csproj",
+      "projectPath": "C:\\github\\bite\\Bite\\BiteGui\\BiteGui.csproj",
       "packagesPath": "C:\\Users\\marcm\\.nuget\\packages\\",
-      "outputPath": "C:\\github\\Bite\\BiteGui\\obj\\",
+      "outputPath": "C:\\github\\bite\\Bite\\BiteGui\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
