@@ -2,7 +2,13 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="Document.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Output.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PropertiesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SavedLayout.xaml.cs">
@@ -10,10 +16,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Document.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Output.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PropertiesWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SavedLayout.xaml">

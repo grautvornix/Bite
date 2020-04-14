@@ -9,7 +9,7 @@
     
     <Page.CommandBindings>
         <CommandBinding Command="ApplicationCommands.New" Executed="NewDocument" />
-        <CommandBinding Command="ApplicationCommands.Close" CanExecute="CanExecuteCloseActiveDocument" Executed="CloseActiveDocument" />
+        <!--<CommandBinding Command="ApplicationCommands.Close" CanExecute="CanExecuteCloseActiveDocument" Executed="CloseActiveDocument" />-->
     </Page.CommandBindings>
     
     <Grid>
@@ -23,8 +23,8 @@
                 <MenuItem Header="_Close Active Document" Command="ApplicationCommands.Close">
                 </MenuItem>
                 <Separator />
-                <MenuItem Header="_Save Layout" Click="SaveLayout_Click" />
-                <MenuItem Header="_Load Layout " Click="LoadLayout_Click" IsEnabled="{Binding ElementName=mainPage, Path=IsLayoutSaved}" />
+                <!--<MenuItem Header="_Save Layout" Click="SaveLayout_Click" />
+                <MenuItem Header="_Load Layout " Click="LoadLayout_Click" IsEnabled="{Binding ElementName=mainPage, Path=IsLayoutSaved}" />-->
             </MenuItem>
         </Menu>
         <dz:DockControl
@@ -41,8 +41,8 @@
                 <local:Output x:Name="output" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Bottom}" />
                 <local:SavedLayout x:Name="savedLayout" ShowAction="{dz:ShowAsDockPositionAction DockPosition=BottomAutoHide}" />
                 <local:PropertiesWindow x:Name="propertiesWindow" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Left}" />
-                <local:SolutionExplorer x:Name="solutionExplorer" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Right}" />
-                <local:Welcome x:Name="welcome" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Document}" />
+                <!--<local:SolutionExplorer x:Name="solutionExplorer" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Right}" />
+                <local:Welcome x:Name="welcome" ShowAction="{dz:ShowAsDockPositionAction DockPosition=Document}" />-->
             </dz:DockControl.DockItems>
         </dz:DockControl>
     </Grid>

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DevZest.Windows.Docking;
 
 namespace Baer.BiteGui
 {
@@ -21,6 +22,8 @@ namespace Baer.BiteGui
     /// </summary>
     public partial class MainPage
     {
+        private int _lastDocumentId;
+
         public MainPage()
         {
             InitializeComponent();
@@ -31,6 +34,53 @@ namespace Baer.BiteGui
                 sb.AppendLine(assembly.FullName);
             output.AppendLog(sb.ToString());
 
+        }
+        private void NewDocument(object sender, ExecutedRoutedEventArgs e)
+        {
+            Document document = new Document(++_lastDocumentId);
+            document.Show(dockControl);
+        }
+        private void OnFocusedItemChanged(object sender, EventArgs e)
+        {
+            output.AppendLog(string.Format("FocusedItemChanged: FocusedItem={0}", GetString(dockControl.FocusedItem)));
+        }
+        private void OnActiveItemChanged(object sender, EventArgs e)
+        {
+            output.AppendLog(string.Format("ActiveItemChanged: ActiveItem={0}", GetString(dockControl.ActiveItem)));
+        }
+
+        private void OnActiveDocumentChanged(object sender, EventArgs e)
+        {
+            output.AppendLog(string.Format("ActiveDocumentChanged: ActiveDocument={0}", GetString(dockControl.ActiveDocument)));
+        }
+
+        private void OnDockItemStateChanging(object sender, DockItemStateEventArgs e)
+        {
+            output.AppendLog(string.Format("DockItemStateChanging: {0}", GetString(e)));
+        }
+
+        private void OnDockItemStateChanged(object sender, DockItemStateEventArgs e)
+        {
+            output.AppendLog(string.Format("DockItemStateChanged: {0}", GetString(e)));
+        }
+        private string GetString(DockItem item)
+        {
+            return item == null ? "null" : item.TabText;
+        }
+        private string GetString(DockItemStateEventArgs e)
+        {
+            if (e.OldDockPosition == e.NewDockPosition)
+                return string.Format("DockItem={0}, StateChangeMethod={1}, ShowMethod={2}",
+                    GetString(e.DockItem),
+                    e.StateChangeMethod,
+                    e.ShowMethod);
+            else
+                return string.Format("DockItem={0}, StateChangeMethod={1}, DockPosition={2}->{3}, ShowMethod={4}",
+                    GetString(e.DockItem),
+                    e.StateChangeMethod,
+                    e.OldDockPosition,
+                    e.NewDockPosition,
+                    e.ShowMethod);
         }
     }
 }
