@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BiteGui\BiteGui.csproj">
+      <Project>{a196be25-ac9b-4149-b17d-0d7b72c06261}</Project>
+      <Name>BiteGui</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

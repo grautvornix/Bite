@@ -20,7 +20,7 @@ namespace Baer.BiteGui
     {
         public Output()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
         public void AppendLog(string text)
         {

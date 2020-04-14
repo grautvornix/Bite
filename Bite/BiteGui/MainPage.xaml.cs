@@ -20,8 +20,11 @@ namespace Baer.BiteGui
     /// <summary>
     /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class MainPage
+    partial class MainPage
     {
+        private static readonly DependencyPropertyKey IsLayoutSavedPropertyKey = DependencyProperty.RegisterReadOnly("IsLayoutSaved", typeof(bool), typeof(MainPage), new FrameworkPropertyMetadata(false));
+        public static readonly DependencyProperty IsLayoutSavedProperty = IsLayoutSavedPropertyKey.DependencyProperty;
+
         private int _lastDocumentId;
 
         public MainPage()
@@ -40,6 +43,16 @@ namespace Baer.BiteGui
             Document document = new Document(++_lastDocumentId);
             document.Show(dockControl);
         }
+
+        private void CanExecuteCloseActiveDocument(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = dockControl.ActiveDocument != null;
+        }
+        private void CloseActiveDocument(object sender, ExecutedRoutedEventArgs e)
+        {
+            dockControl.ActiveDocument.PerformClose();
+        }
+
         private void OnFocusedItemChanged(object sender, EventArgs e)
         {
             output.AppendLog(string.Format("FocusedItemChanged: FocusedItem={0}", GetString(dockControl.FocusedItem)));
@@ -81,6 +94,17 @@ namespace Baer.BiteGui
                     e.OldDockPosition,
                     e.NewDockPosition,
                     e.ShowMethod);
+        }
+        private DockItem LoadDockItem(object obj)
+        {
+            if (savedLayout.GetType().ToString().Equals(obj))
+                return savedLayout;
+            else if (output.GetType().ToString().Equals(obj))
+                return output;
+            else if (propertiesWindow.GetType().ToString().Equals(obj))
+                return propertiesWindow;
+            else
+                return obj as DockItem;
         }
     }
 }

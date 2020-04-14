@@ -9,7 +9,7 @@
     
     <Page.CommandBindings>
         <CommandBinding Command="ApplicationCommands.New" Executed="NewDocument" />
-        <!--<CommandBinding Command="ApplicationCommands.Close" CanExecute="CanExecuteCloseActiveDocument" Executed="CloseActiveDocument" />-->
+        <CommandBinding Command="ApplicationCommands.Close" CanExecute="CanExecuteCloseActiveDocument" Executed="CloseActiveDocument" />
     </Page.CommandBindings>
     
     <Grid>
@@ -22,9 +22,6 @@
                 <MenuItem Header="_New Document" Command="ApplicationCommands.New" />
                 <MenuItem Header="_Close Active Document" Command="ApplicationCommands.Close">
                 </MenuItem>
-                <Separator />
-                <!--<MenuItem Header="_Save Layout" Click="SaveLayout_Click" />
-                <MenuItem Header="_Load Layout " Click="LoadLayout_Click" IsEnabled="{Binding ElementName=mainPage, Path=IsLayoutSaved}" />-->
             </MenuItem>
         </Menu>
         <dz:DockControl
